@@ -160,8 +160,8 @@ ItemDisplay[(ARMOR OR WEAPON) EXC NMAG !(SOCK>1 SUP) CLVL>74 !RW]:
 
 /// Markings for everything that still shows
 // Marking Exceptional and Elite Items
-ItemDisplay[EXC]:	%NAME%%RED%[%PURPLE%!%RED%]%CONTINUE%
-ItemDisplay[ELT]:	%NAME%%PURPLE%[%RED%!!!%PURPLE%]%CONTINUE%
+ItemDisplay[EXC]:	%NAME%%RED%[%PURPLE%exc%RED%]%CONTINUE%
+ItemDisplay[ELT]:	%NAME%%PURPLE%[%RED%elt%PURPLE%]%CONTINUE%
 
 // Marking Ethereal and Socketed Items
 ItemDisplay[SOCK>0 SOCK<3]:	%NAME%%WHITE%[%GRAY%%SOCKETS%os%WHITE%]%CONTINUE%
@@ -173,8 +173,11 @@ ItemDisplay[ETH]:	%NAME%%WHITE%[%GRAY%ETH%WHITE%]%CONTINUE%
 ItemDisplay[WEAPON OR ARMOR OR cm1 OR cm2 OR cm3 OR jew OR aq2 OR cq2 OR rin OR amu ILVL>0]]:	%NAME%%WHITE%[l%ILVL%%WHITE%]%CONTINUE%
 
 // Marking Exceptional and Elite possible Runeword Bases
-ItemDisplay[EXC SOCK>1 !RW]:	%NAME%%YELLOW%base%CONTINUE%
-ItemDisplay[ELT SOCK>1 !RW]:	%NAME%%ORANGE%base%CONTINUE%
+ItemDisplay[EXC SOCK>1 !RW]:	%NAME%%YELLOW%rwb%CONTINUE%
+ItemDisplay[ELT SOCK>1 !RW]:	%NAME%%ORANGE%rwb%CONTINUE%
+
+// Marking Elite Crafting bases for popular crafts (according to d2jsp)
+ItemDisplay[uvg OR umg OR umc OR uvc OR ulb OR (ELT AXE)]: %NAME%%GREEN%[%ORANGE%craft%GREEN%]%CONTINUE%
 
 // Making sure Uniques, Set items and potentially decent bases always notify and show on the minimap
 ItemDisplay[UNI OR SET OR (SOCK>3 EXC) OR (SOCK>1 ELT))]: %NAME%%MAP-9B%
@@ -182,6 +185,10 @@ ItemDisplay[UNI OR SET OR (SOCK>3 EXC) OR (SOCK>1 ELT))]: %NAME%%MAP-9B%
 /// PD2 Item Handling
 // Showing Item as is, with Notificaction and some visual appeal
 ItemDisplay[wss OR lbox OR imra OR imma OR scou OR rera OR upma OR t16 OR t17 OR t18]: %NAME%%ORANGE%[%PURPLE%pd2%ORANGE%]%MAP%
+
+/// EndGame Stuff Handling
+// Showing Item as is, wich Notification and some visual appeal
+ItemDisplay[tes OR ceh OR bet OR fed OR toa OR pk1 OR pk2 OR pk3 OR dhn OR bey OR mbr]: %NAME%%ORANGE%[%PURPLE%eg%ORANGE%]%MAP%
 
 // Default Display
 ItemDisplay[]:	%NAME%
