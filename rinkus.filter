@@ -179,5 +179,9 @@ ItemDisplay[ELT SOCK>1 !RW]:	%NAME%%ORANGE%base%CONTINUE%
 // Making sure Uniques, Set items and potentially decent bases always notify and show on the minimap
 ItemDisplay[UNI OR SET OR (SOCK>3 EXC) OR (SOCK>1 ELT))]: %NAME%%MAP-9B%
 
+/// PD2 Item Handling
+// Showing Item as is, with Notificaction and some visual appeal
+ItemDisplay[wss OR lbox OR imra OR imma OR scou OR rera OR upma OR t16 OR t17 OR t18]: %NAME%%ORANGE%[%PURPLE%pd2%ORANGE%]%MAP%
+
 // Default Display
 ItemDisplay[]:	%NAME%
