@@ -30,3 +30,5 @@ Things that give information:
 
 Changelog:
 * Added basic visual appeal / map Dot and notifications for pd2 items like maps
+* Added basic visual appeal / map Dot and notifications for engame stuff like key, organs and so forth
+* Added Markings for decent Elite crafting bases
