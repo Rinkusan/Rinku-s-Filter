@@ -1,6 +1,6 @@
 // +----------------------------------------------------------------------------+
 // |                                                                            |
-// |     Rinku's Basic Project Diablo 2 Loot Filter                          	  |
+// |     Rinku's Basic Project Diablo 2 Loot Filter                          	|
 // |     https://github.com/Rinkusan/Rinku-s-Filter                             |
 // |                                                                            |
 // +----------------------------------------------------------------------------+
@@ -147,18 +147,21 @@ ItemDisplay[aqv OR cqv]:
 
 /// Progressively removing clutter / likely unneeded items
 // Hiding Normal, Regular, Non-Superior, Armors and Weapons with less than 2 Sockets as well as Normal Magic Armors and Weapons starting at level 30
-ItemDisplay[(ARMOR OR WEAPON) NORM (MAG OR (NMAG SOCK<2 !SUP !leg)) CLVL>29 !RW]:
+ItemDisplay[(ARMOR OR WEAPON) NORM (MAG OR (NMAG SOCK<2 !SUP !leg)) CLVL>29 !RW !CIRC]:
 
 // Hiding all Normal, Regular Weapons and Armor except for Superior items with 3 sockets or more starting at level 45 
-ItemDisplay[(ARMOR OR WEAPON) NORM NMAG !(SOCK>2 SUP) CLVL>44 !RW]:
+ItemDisplay[(ARMOR OR WEAPON) NORM NMAG !(SOCK>2 SUP) CLVL>44 !RW !CIRC]:
 
 // Hiding all Exceptional, Regular, Non-Superior, Armors and Weapons with less than 2 Sockets as well as Exceptional Magic Armors and Weapons starting at Character level 60
-ItemDisplay[(ARMOR OR WEAPON) EXC (MAG OR (NMAG SOCK<2 !SUP)) CLVL>59 !RW]:
+ItemDisplay[(ARMOR OR WEAPON) EXC (MAG OR (NMAG SOCK<2 !SUP)) CLVL>59 !RW !CIRC]:
 
 // Hiding all Exceptional, Regular Armors and Weapons except for Superior items with 2 sockets or more starting at level 75
-ItemDisplay[(ARMOR OR WEAPON) EXC NMAG !(SOCK>1 SUP) CLVL>74 !RW]:
+ItemDisplay[(ARMOR OR WEAPON) EXC NMAG !(SOCK>1 SUP) CLVL>74 !RW !CIRC]:
 
 /// Markings for everything that still shows
+// Marking Circlets for Imbue
+ItemDisplay[NMAG SOCK=0 CIRC]: [Imbue]->%NAME%%CONTINUE%
+
 // Marking Exceptional and Elite Items
 ItemDisplay[EXC]:	%NAME%%RED%[%PURPLE%exc%RED%]%CONTINUE%
 ItemDisplay[ELT]:	%NAME%%PURPLE%[%RED%elt%PURPLE%]%CONTINUE%
@@ -184,7 +187,7 @@ ItemDisplay[UNI OR SET OR (SOCK>1 ELT))]: %NAME%%MAP-9B%
 
 /// PD2 Item Handling
 // Showing Item as is, with Notificaction and some visual appeal
-ItemDisplay[wss OR lbox OR imra OR imma OR scou OR rera OR upma OR t16 OR t17 OR t18]: %NAME%%ORANGE%[%PURPLE%pd2%ORANGE%]%MAP%
+ItemDisplay[wss OR lbox OR imra OR imma OR scou OR rera OR upma OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18]: %NAME%%ORANGE%[%PURPLE%pd2%ORANGE%]%MAP%
 
 /// EndGame Stuff Handling
 // Showing Item as is, wich Notification and some visual appeal
