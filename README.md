@@ -3,6 +3,7 @@ Basic Loot Filter for Project Diablo 2
 Hey everyone, this filter is fairly basic.
 It removes clutter that you don't usually need.
 I don't like heavily customized content, so I don't include any custom texts or descriptions, I merely mark items.
+
 Things that are hidden:
 * Low amounts of gold (progressively)
 * Throwing poison / fulmination potions (at level 7)
