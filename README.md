@@ -27,3 +27,6 @@ Things that give information:
 * Runes show their Rune Number and Stacks show Quantity
 * Gems are stylised to be more recognizable, none are hidden (this was copied from another filter)
 * Starting with mid-tier runes, all runes, unique items, set items and potentially decent runeword bases trigger a notification and show on the minimap
+
+Changelog:
+* Added basic visual appeal / map Dot and notifications for pd2 items like maps
