@@ -16,6 +16,7 @@ Things that are hidden:
 * All Regular Normal Items except Superior Items with 3 Sockets or more (level 45)
 * Regular Non-Superior Exceptional Items with one or no sockets, Magic Exceptional Items (at level 60)
 * All regular Exceptional Items except for Superior Items with 2 Sockets or more (at level 75)
+
 Things that give information:
 * All shown Item drops (Weapons or Armor) show in order: ItemName[!exc or !!!elt][#Sockets][eth?][itemlvl]RW-base?
 * Runes show their Rune Number and Stacks show Quantity
