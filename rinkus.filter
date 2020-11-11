@@ -1,6 +1,6 @@
 // +----------------------------------------------------------------------------+
 // |                                                                            |
-// |     Rinku's Basic Project Diablo 2 Loot Filter                          	|
+// |     Rinku's Basic Project Diablo 2 Loot Filter                          	  |
 // |     https://github.com/Rinkusan/Rinku-s-Filter                             |
 // |                                                                            |
 // +----------------------------------------------------------------------------+
@@ -43,13 +43,13 @@ ItemDisplay[mp1]:	%BLUE%**%WHITE%Min Mana
 // Light at level 15
 ItemDisplay[hp2 CLVL>14]:
 ItemDisplay[hp2]:	%RED%**%WHITE%Lt Heal
-ItemDisplay[mp2 CLVL>14]:
+ItemDisplay[mp2 CLVL>17]:
 ItemDisplay[mp2]:	%BLUE%**%WHITE%Lt Mana
 
 // Normal at level 20
 ItemDisplay[hp3 CLVL>19]:
 ItemDisplay[hp3]:	%RED%**%WHITE%Heal
-ItemDisplay[mp3 CLVL>19]:
+ItemDisplay[mp3 CLVL>24]:
 ItemDisplay[mp3]:	%BLUE%**%WHITE%Mana
 
 // Great at level 35
@@ -159,8 +159,11 @@ ItemDisplay[(ARMOR OR WEAPON) EXC (MAG OR (NMAG SOCK<2 !SUP)) CLVL>59 !RW !CIRC]
 ItemDisplay[(ARMOR OR WEAPON) EXC NMAG !(SOCK>1 SUP) CLVL>74 !RW !CIRC]:
 
 /// Markings for everything that still shows
+// Starting a new line after %NAME% if we can expect many markings
+ItemDisplay[(ARMOR OR WEAPON) SOCK>0 OR ETH]:	%NAME%%NL%%CONTINUE%
+
 // Marking Circlets for Imbue
-ItemDisplay[NMAG SOCK=0 CIRC]: [Imbue]->%NAME%%CONTINUE%
+ItemDisplay[NMAG SOCK=0 CIRC]: %RED%[%YELLOW%Imbue%RED%]%YELLOW%->%WHITE%%NAME%%CONTINUE%
 
 // Marking Exceptional and Elite Items
 ItemDisplay[EXC]:	%NAME%%RED%[%PURPLE%exc%RED%]%CONTINUE%
@@ -191,7 +194,7 @@ ItemDisplay[wss OR lbox OR imra OR imma OR scou OR rera OR upma OR t11 OR t12 OR
 
 /// EndGame Stuff Handling
 // Showing Item as is, wich Notification and some visual appeal
-ItemDisplay[tes OR ceh OR bet OR fed OR toa OR pk1 OR pk2 OR pk3 OR dhn OR bey OR mbr]: %NAME%%ORANGE%[%PURPLE%eg%ORANGE%]%MAP%
+ItemDisplay[tes OR ceh OR bet OR fed OR toa OR pk1 OR pk2 OR pk3 OR dhn OR bey OR mbr OR dcma OR dcbl OR dcho OR dcso]: %NAME%%ORANGE%[%PURPLE%eg%ORANGE%]%MAP%
 
 // Default Display
 ItemDisplay[]:	%NAME%
